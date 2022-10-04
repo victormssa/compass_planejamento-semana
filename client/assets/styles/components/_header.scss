@@ -1,1 +1,106 @@
 @import '../components/var';
+
+.header {
+    padding-bottom: 10px;
+    background-color: white;
+    box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+    border-radius: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1px 0;
+    .header__menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 12px 200px 12px 24px;
+        margin: 25px 0 35px 0;
+        gap: 8px;
+        background: #6688FF;
+        border-radius: 0px 14px 15px 0px;
+        .header__menu--title {
+            margin-top: 10.5px;
+            margin-left: 0;
+            margin-bottom: 0;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 20px;
+            padding-top: 0;
+            padding-bottom: 0;
+            color: white;
+        }
+        .header__menu--text {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 20px;
+            margin-top: 0;
+            margin-bottom: 10.5px;
+            padding-top: 0;
+            padding-bottom: 0;
+            color: white;
+        }
+    }
+    
+    .header__button {
+        display: flex;
+        justify-content: space-between;
+        .header__button--save {
+            font-family: $secondary-font;
+            padding: 10px 12px;
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 20px;
+            gap: 4px;
+            background: #2CBE82;
+            color: white;
+            border-style: none;
+            border-radius: 10px;
+            flex-grow: 0;
+            margin-right: 10px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .header__button--remove {
+            font-family: $secondary-font;
+            padding: 10px 12px;
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 20px;
+            gap: 4px;
+            background:#DA2B40;
+            color: white;
+            border-style: none;
+            border-radius: 10px;
+            flex-grow: 0;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    .header__clock {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 30px;
+        .header__clock--time {
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 20px;
+            color: #3B3E45;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            padding: 0;
+        }
+        .header__clock--day {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 20px;
+            color: #3B3E45;
+            margin-bottom: 20px;
+            padding: 0;
+        }
+    
+    }
+}

@@ -1,6 +1,6 @@
 let today = new Date();
 let date = today.getDate();
-monName = new Array ("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Agosto", "Outubro", "Novembro", "Dezembro")
+monName = new Array ("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro")
 month = monName [today.getMonth()];
 year = today.getFullYear();
 

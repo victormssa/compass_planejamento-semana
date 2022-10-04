@@ -9,7 +9,8 @@
         <link rel="stylesheet" href="assets/styles/style.css">
         <script src="assets/scripts/clock.js" defer></script>
         <script src="assets/scripts/calendar.js" defer></script>
-        <script src="script.js" defer></script>
+        <script src="assets/scripts/remove.js" defer></script>
+        
     </head>
     <body>
         <header class="header">
@@ -17,16 +18,234 @@
                 <h1 class="header__menu--title">Planejamento Semanal</h1>
                 <p class="header__menu--text">Utilize o formulário para adicionar novas tarefas:</p>
             </section>
-            <button class="header__button--save">Salvar LocalStorage</button>
-            <button class="header__button--exclude">Excluir LocalStorage</button>
+            <section class="header__button">
+                <button class="header__button--save" id="save">Salvar LocalStorage</button>
+                <button class="header__button--remove" id="remove">Excluir LocalStorage</button>
+            </section>
             <section class="header__clock">
                 <h2 class="header__clock--time" id="hour"></h2>
                 <p class="header__clock--day" id="calendar"></p>
             </section>
         </header>
-        <main>
-            <section>
+        <main class="main">
+            <section class="form">
+                <input class="form__text" type="text" id="name" placeholder="&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Atividade">
+                <label class="form__day" for="day">
+                    <select class="form__day--select" name="day" id="day" required>
+                        <option value="segunda">Segunda-Feira</option>
+                        <option value="terça">Terça-Feira</option>
+                        <option value="quarta">Quarta-Feira</option>
+                        <option value="quinta">Quinta-Feira</option>
+                        <option value="sexta">Sexta-Feira</option>
+                        <option value="sabado">Sábado</option>
+                        <option value="domingo">Domingo</option>
+                    </select>
+                </label>
+                <label class="form__time" for="time">
+                    <select class="form__time--select" name="time" id="time" required>
+                        <option value="00h00m">00h00m</option>
+                        <option value="00h30m">00h30m</option>
+                        <option value="h00m">01h00m</option>
+                        <option value="h30m">01h30m</option>
+                        <option value="h00m">02h00m</option>
+                        <option value="h30m">02h30m</option>
+                        <option value="h00m">03h00m</option>
+                        <option value="h30m">03h30m</option>
+                        <option value="h00m">04h00m</option>
+                        <option value="h30m">04h30m</option>
+                        <option value="h00m">05h00m</option>
+                        <option value="h30m">05h30m</option>
+                        <option value="h00m">06h00m</option>
+                        <option value="h30m">06h30m</option>
+                        <option value="h00m">07h00m</option>
+                        <option value="h30m">07h30m</option>
+                        <option value="h00m">08h00m</option>
+                        <option value="h30m">08h30m</option>
+                        <option value="h00m">09h00m</option>
+                        <option value="h30m">09h30m</option>
+                        <option value="h00m">10h00m</option>
+                        <option value="h30m">10h30m</option>
+                        <option value="h00m">11h00m</option>
+                        <option value="h30m">11h30m</option>
+                        <option value="h00m">12h00m</option>
+                        <option value="h30m">12h30m</option>
+                        <option value="h00m">13h00m</option>
+                        <option value="h30m">13h30m</option>
+                        <option value="h00m">14h00m</option>
+                        <option value="h30m">14h30m</option>
+                        <option value="h00m">15h00m</option>
+                        <option value="h30m">15h30m</option>
+                        <option value="h00m">16h00m</option>
+                        <option value="h30m">16h30m</option>
+                        <option value="h00m">17h00m</option>
+                        <option value="h30m">17h30m</option>
+                        <option value="h00m">18h00m</option>
+                        <option value="h30m">18h30m</option>
+                        <option value="h00m">19h00m</option>
+                        <option value="h30m">19h30m</option>
+                        <option value="h00m">20h00m</option>
+                        <option value="h30m">20h30m</option>
+                        <option value="h00m">21h00m</option>
+                        <option value="h30m">21h30m</option>
+                        <option value="h00m">22h00m</option>
+                        <option value="h30m">22h30m</option>
+                        <option value="h00m">23h00m</option>
+                        <option value="h30m">23h30m</option>
+                    </select>
+                </label>
+                <button type="submit" class="form__button--add">+ Adicionar Atividade</button>
+                <button type="button" class="form__button--rem">- Excluir Todos</button>
+            </section>
+            
+            <section class="main__section">
+                <ul class="main__section--buttons">
+                    <li>
+                        <button class="main__section--segunda">
+                            Segunda-Feira
+                        </button>
+                    </li>
+                    <li>
+                        <button class="main__section--terca">
+                            Terça-Feira
+                        </button>
+                    </li>
+                    <li>
+                        <button class="main__section--quarta">
+                            Quarta-Feira
+                        </button>
+                    </li>
+                    <li>
+                        <button class="main__section--quinta">
+                            Quinta-Feira
+                        </button>
+                    </li>
+                    <li>
+                        <button class="main__section--sexta">
+                            Sexta-Feira
+                        </button>
+                    </li>
+                    <li>
+                        <button class="main__section--sabado">
+                            Sábado
+                        </button>
+                    </li>
+                    <li>
+                        <button class="main__section--domingo">
+                            Domingo
+                        </button>
+                    </li>
+                </ul>
+                <article class="main__section--article">
+                    <div class="main__section--mark">
+                        <p>Horário</p>
+                    </div>
+                    <ul class="list a" id="segunda">
+                        <li class="card">
+                            <div class="card__time card__time--segunda">
+                                <p>00h00m</p>
+                            </div>
+                            <div class="card__info">
+                                <div class="card__info--segunda"></div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <button>Apagar</button>
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="card__time card__time--segunda">
+                                <p>00h30m</p>
+                            </div>
+                            <div class="card__info">
+                                <div class="card__info--segunda"></div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <button>Apagar</button>
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="card__time card__time--segunda">
+                                <p>01h00m</p>
+                            </div>
+                            <div class="card__info">
+                                <div class="card__info--segunda"></div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <button>Apagar</button>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="list b off" id="terca">
+                        <li class="card">
+                            <div class="card__time card__time--terca">
+                                <p>00h00m</p>
+                            </div>
+                            <div class="card__info">
+                                <div class="card__info--terca"></div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <button>Apagar</button>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="list c off" id="quarta">
+                        <li class="card">
+                            <div class="card__time card__time--quarta">
+                                <p>00h00m</p>
+                            </div>
+                            <div class="card__info">
+                                <div class="card__info--quarta"></div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <button>Apagar</button>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="list d off" id="quinta">
+                        <li class="card">
+                            <div class="card__time card__time--quinta">
+                                <p>00h00m</p>
+                            </div>
+                            <div class="card__info">
+                                <div class="card__info--quinta"></div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <button>Apagar</button>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="list e off" id="sexta">
+                        <li class="card">
+                            <div class="card__time card__time--sexta">
+                                <p>00h00m</p>
+                            </div>
+                            <div class="card__info">
+                                <div class="card__info--sexta"></div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <button>Apagar</button>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="list f off" id="sabado">
+                        <li class="card">
+                            <div class="card__time card__time--sabado">
+                                <p>00h00m</p>
+                            </div>
+                            <div class="card__info">
+                                <div class="card__info--sabado"></div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <button>Apagar</button>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="list g off" id="domingo">
+                        <li class="card">
+                            <div class="card__time card__time--domingo">
+                                <p>00h00m</p>
+                            </div>
+                            <div class="card__info">
+                                <div class="card__info--domingo"></div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <button>Apagar</button>
+                            </div>
+                        </li>
+                    </ul>
+                <article/>
             </section>
         </main>
     </body>
+    <script src="main.js"></script>
 </html>

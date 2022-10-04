@@ -1,3 +1,389 @@
+.header {
+  padding-bottom: 10px;
+  background-color: white;
+  box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+  border-radius: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1px 0;
+}
+.header .header__menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 12px 200px 12px 24px;
+  margin: 25px 0 35px 0;
+  gap: 8px;
+  background: #6688FF;
+  border-radius: 0px 14px 15px 0px;
+}
+.header .header__menu .header__menu--title {
+  margin-top: 10.5px;
+  margin-left: 0;
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 20px;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: white;
+}
+.header .header__menu .header__menu--text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  margin-top: 0;
+  margin-bottom: 10.5px;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: white;
+}
+.header .header__button {
+  display: flex;
+  justify-content: space-between;
+}
+.header .header__button .header__button--save {
+  font-family: "Nunito", sans-serif;
+  padding: 10px 12px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  gap: 4px;
+  background: #2CBE82;
+  color: white;
+  border-style: none;
+  border-radius: 10px;
+  flex-grow: 0;
+  margin-right: 10px;
+}
+.header .header__button .header__button--save:hover {
+  cursor: pointer;
+}
+.header .header__button .header__button--remove {
+  font-family: "Nunito", sans-serif;
+  padding: 10px 12px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  gap: 4px;
+  background: #DA2B40;
+  color: white;
+  border-style: none;
+  border-radius: 10px;
+  flex-grow: 0;
+}
+.header .header__button .header__button--remove:hover {
+  cursor: pointer;
+}
+.header .header__clock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 30px;
+}
+.header .header__clock .header__clock--time {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 20px;
+  color: #3B3E45;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 0;
+}
+.header .header__clock .header__clock--day {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  color: #3B3E45;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.main {
+  overflow: scroll;
+}
+.main .form {
+  margin: 20px 0 0 30px;
+  color: #3B3E45;
+}
+.main .form .form__text {
+  border-style: solid;
+  border-color: #2CBE82;
+  border-radius: 10px;
+  padding: 10px 198px 10px 12px;
+  font-weight: 20px;
+  margin-right: 25px;
+  border-width: 1px;
+  font-family: "Nunito", sans-serif;
+}
+.main .form .form__day {
+  margin-right: 28px;
+}
+.main .form .form__day .form__day--select {
+  border-style: solid;
+  border-color: #2CBE82;
+  height: 44px;
+  width: 220px;
+  border-radius: 10px;
+  padding: 10px 84px 10px 12px;
+  gap: 4px;
+  color: #3B3E45;
+  font-family: "Nunito", sans-serif;
+}
+.main .form .form__time {
+  margin-right: 42px;
+}
+.main .form .form__time .form__time--select {
+  border-style: solid;
+  border-color: #2CBE82;
+  height: 44px;
+  width: 103px;
+  border-radius: 10px;
+  padding: 10px 12px 10px 12px;
+  color: #3B3E45;
+  font-family: "Nunito", sans-serif;
+}
+.main .form .form__button--add {
+  font-family: "Nunito", sans-serif;
+  width: 222px;
+  padding: 10px 12px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  gap: 4px;
+  background: #2CBE82;
+  color: white;
+  border-style: none;
+  border-radius: 10px;
+  flex-grow: 0;
+  margin-right: 24px;
+}
+.main .form .form__button--add:hover {
+  cursor: pointer;
+}
+.main .form .form__button--rem {
+  font-family: "Nunito", sans-serif;
+  width: 184px;
+  padding: 10px 12px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  gap: 4px;
+  background: #DA2B40;
+  color: white;
+  border-style: none;
+  border-radius: 10px;
+  flex-grow: 0;
+}
+.main .form .form__button--rem:hover {
+  cursor: pointer;
+}
+.main .main__section .main__section--buttons {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+}
+.main .main__section .main__section--buttons li button {
+  width: 150px;
+  height: 33px;
+  background: #FFA246;
+  box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+  border-radius: 9px 9px 0px 0px;
+  margin-right: 28px;
+  border-style: none;
+  color: white;
+  font-family: "Poppins" sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  cursor: pointer;
+}
+.main .main__section .main__section--buttons li .main__section--segunda {
+  margin-left: 110px;
+}
+.main .main__section .main__section--buttons li .main__section--terca {
+  background-color: #35E185;
+}
+.main .main__section .main__section--buttons li .main__section--quarta {
+  background-color: #6688FF;
+}
+.main .main__section .main__section--buttons li .main__section--quinta {
+  background-color: #B266FF;
+}
+.main .main__section .main__section--buttons li .main__section--sexta {
+  background-color: #66D1FF;
+}
+.main .main__section .main__section--buttons li .main__section--sabado {
+  background-color: #FF66D4;
+}
+.main .main__section .main__section--buttons li .main__section--domingo {
+  background-color: #FF6666;
+}
+.main .main__section .main__section--article {
+  display: flex;
+  flex-direction: row;
+}
+.main .main__section .main__section--article .main__section--mark {
+  position: relative;
+  bottom: 60px;
+  border-style: solid;
+  height: 50px;
+  width: 80px;
+  color: #3B3E45;
+  border-width: 0;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 30px 20px;
+  box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+}
+.main .main__section .main__section--article .main__section--mark p {
+  margin: 0;
+  padding: 10px;
+  font-size: 17px;
+}
+.main .main__section .main__section--article .list {
+  list-style-type: none;
+  position: relative;
+  top: 70px;
+  right: 180px;
+}
+.main .main__section .main__section--article .list .card {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+.main .main__section .main__section--article .list .card .card__time {
+  border-style: solid;
+  color: #3B3E45;
+  border-width: 0;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 30px 20px;
+  box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+}
+.main .main__section .main__section--article .list .card .card__time p {
+  margin: 5px 0px;
+  padding: 10px 5px;
+  font-size: 17px;
+}
+.main .main__section .main__section--article .list .card .card__time--segunda {
+  background-color: rgba(255, 162, 70, 0.2509803922);
+}
+.main .main__section .main__section--article .list .card .card__time--terca {
+  background-color: rgba(53, 225, 133, 0.2509803922);
+}
+.main .main__section .main__section--article .list .card .card__time--quarta {
+  background-color: rgba(102, 135, 255, 0.2509803922);
+}
+.main .main__section .main__section--article .list .card .card__time--quinta {
+  background-color: rgba(178, 102, 255, 0.2509803922);
+}
+.main .main__section .main__section--article .list .card .card__time--sexta {
+  background-color: rgba(102, 209, 255, 0.2509803922);
+}
+.main .main__section .main__section--article .list .card .card__time--sabado {
+  background-color: rgba(255, 102, 212, 0.2509803922);
+}
+.main .main__section .main__section--article .list .card .card__time--domingo {
+  background-color: rgba(255, 102, 102, 0.2509803922);
+}
+.main .main__section .main__section--article .list .card .card__info {
+  display: flex;
+  padding: 5px 0;
+  background-color: rgba(168, 168, 168, 0.1);
+  border-radius: 15px;
+  box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+}
+.main .main__section .main__section--article .list .card .card__info div {
+  background: #F55D5D;
+  border-radius: 15px 0px 0px 15px;
+  padding: 0 10px;
+  margin: 0 10px 0 0;
+}
+.main .main__section .main__section--article .list .card .card__info .card__info--segunda {
+  background: #FFA246;
+}
+.main .main__section .main__section--article .list .card .card__info .card__info--terca {
+  background: #35E185;
+}
+.main .main__section .main__section--article .list .card .card__info .card__info--quarta {
+  background: #6688FF;
+}
+.main .main__section .main__section--article .list .card .card__info .card__info--quinta {
+  background: #B266FF;
+}
+.main .main__section .main__section--article .list .card .card__info .card__info--sexta {
+  background: #66D1FF;
+}
+.main .main__section .main__section--article .list .card .card__info .card__info--sabado {
+  background: #FF66D4;
+}
+.main .main__section .main__section--article .list .card .card__info .card__info--domingo {
+  background: #FF6666;
+}
+.main .main__section .main__section--article .list .card .card__info p {
+  margin: 20px 10px 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+}
+.main .main__section .main__section--article .list .card .card__info button {
+  padding: 10px 12px;
+  margin: 0 20px 95px;
+  background: #98031E;
+  border-style: none;
+  border-radius: 4px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+.main .main__section .main__section--article .off {
+  display: none;
+}
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: none;
+  scrollbar-color: #b5b5b5 #ffffff;
+  margin: 5px 10px 5px 0;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+  border-radius: 10px;
+  border: 0px solid #000000;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #b5b5b5;
+  border-radius: 10px;
+  border: 0px solid #000000;
+}
+
 * {
   font-family: "Poppins", sans-serif;
+}
+
+html {
+  background-image: url("../imgs/bola-LogoCompasso.png");
+  background-repeat: no-repeat;
+  background-size: 550px;
+  background-position: right 0px top 330px;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins" sans-serif;
+  overflow: hidden;
 }/*# sourceMappingURL=style.css.map */

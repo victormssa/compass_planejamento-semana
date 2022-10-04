@@ -1,0 +1,267 @@
+.main {
+    overflow: scroll;
+    .form {
+        margin: 20px 0 0 30px;
+        color: #3B3E45;
+        .form__text {
+            border-style: solid;
+            border-color: #2CBE82;
+            border-radius: 10px;
+            padding: 10px 198px 10px 12px;
+            font-weight: 20px;
+            margin-right: 25px;
+            border-width: 1px;
+            font-family: $secondary-font;
+        }
+        .form__day {
+            margin-right: 28px;
+            .form__day--select {
+                border-style: solid;
+                border-color: #2CBE82;
+                height: 44px;
+                width: 220px;
+                border-radius: 10px;
+                padding: 10px 84px 10px 12px;
+                gap: 4px;
+                color: #3B3E45;
+                font-family: $secondary-font;
+            }
+        }
+        .form__time {
+            margin-right: 42px;
+            .form__time--select {
+                border-style: solid;
+                border-color: #2CBE82;
+                height: 44px;
+                width: 103px;
+                border-radius: 10px;
+                padding: 10px 12px 10px 12px;
+                color: #3B3E45;
+                font-family: $secondary-font;
+            }
+        }
+        .form__button--add {
+            font-family: $secondary-font;
+            width: 222px;
+            padding: 10px 12px;
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 20px;
+            gap: 4px;
+            background: #2CBE82;
+            color: white;
+            border-style: none;
+            border-radius: 10px;
+            flex-grow: 0;
+            margin-right: 24px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .form__button--rem {
+            font-family: $secondary-font;
+            width: 184px;
+            padding: 10px 12px;
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 20px;
+            gap: 4px;
+            background:#DA2B40;
+            color: white;
+            border-style: none;
+            border-radius: 10px;
+            flex-grow: 0;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        
+    }
+    .main__section {
+        .main__section--buttons {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            li {
+                button {
+                width: 150px;
+                height: 33px;
+                background: #FFA246;
+                box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+                border-radius: 9px 9px 0px 0px;
+                margin-right: 28px;
+                border-style: none;
+                color: white;
+                font-family: 'Poppins' sans-serif;
+                font-weight: 700;
+                font-size: 17px;
+                line-height: 20px;
+                cursor: pointer;
+                }
+                .main__section--segunda {
+                    margin-left: 110px;
+                }
+                .main__section--terca {
+                    background-color: #35E185;
+                }
+                .main__section--quarta {
+                    background-color: #6688FF;
+                }
+                .main__section--quinta {
+                    background-color: #B266FF;
+                }
+                .main__section--sexta {
+                    background-color: #66D1FF;
+                }
+                .main__section--sabado {
+                    background-color: #FF66D4;
+                }
+                .main__section--domingo {
+                    background-color: #FF6666;
+                }
+            }
+        }
+        .main__section--article {
+            display: flex;
+            flex-direction: row;
+            .main__section--mark {
+                position: relative;
+                bottom: 60px;
+                border-style: solid;
+                height: 50px;
+                width: 80px;
+                color: #3B3E45;
+                border-width: 0;
+                border-radius: 8px;
+                margin: 10px;
+                padding: 30px 20px;
+                box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+                p {
+                    margin: 0;
+                    padding: 10px;
+                    font-size: 17px;
+                }
+            }
+            .list {
+                list-style-type: none;
+                position: relative;
+                top: 70px;
+                right: 180px;
+                .card {
+                    display: flex;
+                    flex-direction: row;
+                    margin: 0;
+                    .card__time {
+                        border-style: solid;
+                        color: #3B3E45;
+                        border-width: 0;
+                        border-radius: 8px;
+                        margin: 10px;
+                        padding: 30px 20px;
+                        box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+                        p {
+                            margin: 5px 0px;
+                            padding: 10px 5px;
+                            font-size: 17px;
+                        }
+                    }
+                    .card__time--segunda {
+                        background-color: #FFA24640;
+                    }
+                    .card__time--terca {
+                        background-color: #35E18540;
+                    }
+                    .card__time--quarta{
+                        background-color: #6687ff40;
+                    }
+                    .card__time--quinta {
+                        background-color: #B266FF40;
+                    }
+                    .card__time--sexta {
+                        background-color: #66D1FF40;
+                    }
+                    .card__time--sabado {
+                        background-color: #FF66D440;
+                    }
+                    .card__time--domingo {
+                        background-color: #FF666640;
+                    }
+                    .card__info {
+                        display: flex;
+                        padding: 5px 0;
+                        background-color: rgba(168, 168, 168, 0.10);
+                        border-radius: 15px;
+                        box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+                        div {
+                            background: #F55D5D;
+                            border-radius: 15px 0px 0px 15px;
+                            padding: 0 10px;
+                            margin: 0 10px 0 0;
+                            
+                        }
+                        .card__info--segunda {
+                            background: #FFA246;
+                        }
+                        .card__info--terca {
+                            background: #35E185;
+                        }
+                        .card__info--quarta {
+                            background: #6688FF;
+                        }
+                        .card__info--quinta {
+                            background: #B266FF;
+                        }
+                        .card__info--sexta {
+                            background: #66D1FF;
+                        }
+                        .card__info--sabado {
+                            background: #FF66D4;
+                        }
+                        .card__info--domingo {
+                            background: #FF6666;
+                        }
+                        p {
+                            margin: 20px 10px 0;
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 20px;
+                            line-height: 20px;
+                        }
+                        button {
+                            padding: 10px 12px;
+                            margin: 0 20px 95px;
+                            background: #98031E;
+                            border-style: none;
+                            border-radius: 4px;
+                            font-family: 'Nunito';
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 14px;
+                            color: #FFFFFF;
+                        }
+                    }
+                    
+                }
+            }
+            .off {
+                display: none;
+            }
+            
+            #segunda {
+                
+            }
+            #terca {
+                
+            }
+            #quarta {
+                
+            }
+            #quinta {
+                
+            }
+            #sexta {
+                
+            }
+        }
+    }
+}

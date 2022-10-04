@@ -1,6 +1,22 @@
 @import 'components/var';
 @import 'components/header';
+@import 'components/main';
+@import 'components/scrollbar';
 
 * {
     font-family: $primary-font;
+}
+
+html {
+    background-image: url('../imgs/bola-LogoCompasso.png');
+    background-repeat: no-repeat;
+    background-size: 550px;
+    background-position: right 00px top 330px;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins' sans-serif;
+    overflow: hidden;
 }

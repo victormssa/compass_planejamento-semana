@@ -1,5 +1,6 @@
-document.getElementById('remove').onclick = remove();
-
-function remove() {
+function removeAll() {
     localStorage.clear();
+    location.reload();
 }
+
+

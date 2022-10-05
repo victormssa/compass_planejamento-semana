@@ -9,14 +9,16 @@
 
 html {
     background-image: url('../imgs/bola-LogoCompasso.png');
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 550px;
     background-position: right 00px top 330px;
-    margin: 0;
+
 }
 
 body {
     margin: 0;
     font-family: 'Poppins' sans-serif;
-    overflow: hidden;
+
+    margin: 0 10px 0 0;
 }

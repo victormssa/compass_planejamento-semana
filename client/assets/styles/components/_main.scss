@@ -1,81 +1,95 @@
 .main {
-    overflow: scroll;
     .form {
         margin: 20px 0 0 30px;
         color: #3B3E45;
-        .form__text {
-            border-style: solid;
-            border-color: #2CBE82;
-            border-radius: 10px;
-            padding: 10px 198px 10px 12px;
-            font-weight: 20px;
-            margin-right: 25px;
-            border-width: 1px;
-            font-family: $secondary-font;
-        }
-        .form__day {
-            margin-right: 28px;
-            .form__day--select {
+        form {
+            display: flex;
+            b {
+                font-size: 24px;
+            }
+            .form__text {
                 border-style: solid;
                 border-color: #2CBE82;
-                height: 44px;
+                border-radius: 10px;
                 width: 220px;
-                border-radius: 10px;
-                padding: 10px 84px 10px 12px;
+                height: 20px;
+                padding: 10px 120px 10px 12px;
+                font-weight: 20px;
+                border-width: 1px;
+                font-family: $secondary-font;
+                .form__text--input {
+                    border-style: none;
+                    margin: 0 0 10px 40px;
+                    &:focus {
+                        border-width: 0;
+                        border-color: white;
+                    }
+                }
+            }
+            .form__day {
+                margin-right: 32px;
+                margin-left: 25px;
+                .form__day--select {
+                    border-style: solid;
+                    border-color: #2CBE82;
+                    height: 44px;
+                    width: 220px;
+                    border-radius: 10px;
+                    padding: 10px 84px 10px 12px;
+                    gap: 4px;
+                    color: #3B3E45;
+                    font-family: $secondary-font;
+                }
+            }
+            .form__time {
+                margin-right: 42px;
+                .form__time--select {
+                    border-style: solid;
+                    border-color: #2CBE82;
+                    height: 44px;
+                    width: 103px;
+                    border-radius: 10px;
+                    padding: 10px 12px 10px 12px;
+                    color: #3B3E45;
+                    font-family: $secondary-font;
+                }
+            }
+            .form__button--add {
+                font-family: $secondary-font;
+                width: 222px;
+                padding: 10px 12px;
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 20px;
                 gap: 4px;
-                color: #3B3E45;
-                font-family: $secondary-font;
-            }
-        }
-        .form__time {
-            margin-right: 42px;
-            .form__time--select {
-                border-style: solid;
-                border-color: #2CBE82;
-                height: 44px;
-                width: 103px;
+                background: #2CBE82;
+                color: white;
+                border-style: none;
                 border-radius: 10px;
-                padding: 10px 12px 10px 12px;
-                color: #3B3E45;
+                flex-grow: 0;
+                margin-right: 24px;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            .form__button--rem {
                 font-family: $secondary-font;
+                width: 184px;
+                padding: 10px 12px;
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 20px;
+                gap: 4px;
+                background:#DA2B40;
+                color: white;
+                border-style: none;
+                border-radius: 10px;
+                flex-grow: 0;
+                &:hover {
+                    cursor: pointer;
+                }
             }
         }
-        .form__button--add {
-            font-family: $secondary-font;
-            width: 222px;
-            padding: 10px 12px;
-            font-weight: 400;
-            font-size: 17px;
-            line-height: 20px;
-            gap: 4px;
-            background: #2CBE82;
-            color: white;
-            border-style: none;
-            border-radius: 10px;
-            flex-grow: 0;
-            margin-right: 24px;
-            &:hover {
-                cursor: pointer;
-            }
-        }
-        .form__button--rem {
-            font-family: $secondary-font;
-            width: 184px;
-            padding: 10px 12px;
-            font-weight: 400;
-            font-size: 17px;
-            line-height: 20px;
-            gap: 4px;
-            background:#DA2B40;
-            color: white;
-            border-style: none;
-            border-radius: 10px;
-            flex-grow: 0;
-            &:hover {
-                cursor: pointer;
-            }
-        }
-        
     }
     .main__section {
         .main__section--buttons {
@@ -84,19 +98,22 @@
             flex-direction: row;
             li {
                 button {
-                width: 150px;
-                height: 33px;
-                background: #FFA246;
-                box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
-                border-radius: 9px 9px 0px 0px;
-                margin-right: 28px;
-                border-style: none;
-                color: white;
-                font-family: 'Poppins' sans-serif;
-                font-weight: 700;
-                font-size: 17px;
-                line-height: 20px;
-                cursor: pointer;
+                    width: 150px;
+                    height: 33px;
+                    background: #FFA246;
+                    box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+                    border-radius: 9px 9px 0px 0px;
+                    margin-right: 28px;
+                    border-style: none;
+                    color: white;
+                    font-family: 'Poppins' sans-serif;
+                    font-weight: 700;
+                    font-size: 17px;
+                    line-height: 20px;
+                    cursor: pointer;
+                }
+                .active {
+                    width: 190px;
                 }
                 .main__section--segunda {
                     margin-left: 110px;
@@ -147,21 +164,23 @@
                 position: relative;
                 top: 70px;
                 right: 180px;
+                
                 .card {
                     display: flex;
                     flex-direction: row;
-                    margin: 0;
+                    margin: 10px 20px 10px 10px;
                     .card__time {
                         border-style: solid;
+                        margin: 0 10px 0 0;
                         color: #3B3E45;
                         border-width: 0;
                         border-radius: 8px;
-                        margin: 10px;
                         padding: 30px 20px;
                         box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+                        
                         p {
-                            margin: 5px 0px;
-                            padding: 10px 5px;
+                            margin: 30px 10px;
+                            padding: 0px 0px;
                             font-size: 17px;
                         }
                     }
@@ -188,10 +207,15 @@
                     }
                     .card__info {
                         display: flex;
-                        padding: 5px 0;
-                        background-color: rgba(168, 168, 168, 0.10);
+                        padding: 0;
+                        width: 500px;
+                        background-color: rgba(168, 168, 168, 0.05);
                         border-radius: 15px;
                         box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+                        backdrop-filter: blur(10px);
+                        border-color: white;
+                        border-style: solid;
+                        border-width: 1px;
                         div {
                             background: #F55D5D;
                             border-radius: 15px 0px 0px 15px;
@@ -226,10 +250,11 @@
                             font-weight: 400;
                             font-size: 20px;
                             line-height: 20px;
+                            width: 450px;
                         }
                         button {
                             padding: 10px 12px;
-                            margin: 0 20px 95px;
+                            margin: 10px 10px 95px;
                             background: #98031E;
                             border-style: none;
                             border-radius: 4px;
@@ -238,8 +263,11 @@
                             font-weight: 700;
                             font-size: 14px;
                             color: #FFFFFF;
+                            cursor: pointer;
                         }
+                        
                     }
+                    
                     
                 }
             }

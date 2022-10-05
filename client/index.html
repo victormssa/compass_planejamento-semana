@@ -10,7 +10,6 @@
         <script src="assets/scripts/clock.js" defer></script>
         <script src="assets/scripts/calendar.js" defer></script>
         <script src="assets/scripts/remove.js" defer></script>
-        
     </head>
     <body>
         <header class="header">
@@ -20,7 +19,7 @@
             </section>
             <section class="header__button">
                 <button class="header__button--save" id="save">Salvar LocalStorage</button>
-                <button class="header__button--remove" id="remove">Excluir LocalStorage</button>
+                <button class="header__button--remove" id="remove" onclick="removeAll()">Excluir LocalStorage</button>
             </section>
             <section class="header__clock">
                 <h2 class="header__clock--time" id="hour"></h2>
@@ -29,108 +28,108 @@
         </header>
         <main class="main">
             <section class="form">
-                <input class="form__text" type="text" id="name" placeholder="&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Atividade">
-                <label class="form__day" for="day">
-                    <select class="form__day--select" name="day" id="day" required>
-                        <option value="segunda">Segunda-Feira</option>
-                        <option value="terça">Terça-Feira</option>
-                        <option value="quarta">Quarta-Feira</option>
-                        <option value="quinta">Quinta-Feira</option>
-                        <option value="sexta">Sexta-Feira</option>
-                        <option value="sabado">Sábado</option>
-                        <option value="domingo">Domingo</option>
-                    </select>
-                </label>
-                <label class="form__time" for="time">
-                    <select class="form__time--select" name="time" id="time" required>
-                        <option value="00h00m">00h00m</option>
-                        <option value="00h30m">00h30m</option>
-                        <option value="h00m">01h00m</option>
-                        <option value="h30m">01h30m</option>
-                        <option value="h00m">02h00m</option>
-                        <option value="h30m">02h30m</option>
-                        <option value="h00m">03h00m</option>
-                        <option value="h30m">03h30m</option>
-                        <option value="h00m">04h00m</option>
-                        <option value="h30m">04h30m</option>
-                        <option value="h00m">05h00m</option>
-                        <option value="h30m">05h30m</option>
-                        <option value="h00m">06h00m</option>
-                        <option value="h30m">06h30m</option>
-                        <option value="h00m">07h00m</option>
-                        <option value="h30m">07h30m</option>
-                        <option value="h00m">08h00m</option>
-                        <option value="h30m">08h30m</option>
-                        <option value="h00m">09h00m</option>
-                        <option value="h30m">09h30m</option>
-                        <option value="h00m">10h00m</option>
-                        <option value="h30m">10h30m</option>
-                        <option value="h00m">11h00m</option>
-                        <option value="h30m">11h30m</option>
-                        <option value="h00m">12h00m</option>
-                        <option value="h30m">12h30m</option>
-                        <option value="h00m">13h00m</option>
-                        <option value="h30m">13h30m</option>
-                        <option value="h00m">14h00m</option>
-                        <option value="h30m">14h30m</option>
-                        <option value="h00m">15h00m</option>
-                        <option value="h30m">15h30m</option>
-                        <option value="h00m">16h00m</option>
-                        <option value="h30m">16h30m</option>
-                        <option value="h00m">17h00m</option>
-                        <option value="h30m">17h30m</option>
-                        <option value="h00m">18h00m</option>
-                        <option value="h30m">18h30m</option>
-                        <option value="h00m">19h00m</option>
-                        <option value="h30m">19h30m</option>
-                        <option value="h00m">20h00m</option>
-                        <option value="h30m">20h30m</option>
-                        <option value="h00m">21h00m</option>
-                        <option value="h30m">21h30m</option>
-                        <option value="h00m">22h00m</option>
-                        <option value="h30m">22h30m</option>
-                        <option value="h00m">23h00m</option>
-                        <option value="h30m">23h30m</option>
-                    </select>
-                </label>
-                <button type="submit" class="form__button--add">+ Adicionar Atividade</button>
-                <button type="button" class="form__button--rem">- Excluir Todos</button>
+                <form id="activityForm" action="">
+                    <div class="form__text"><input class="form__text--input" type="text" id="activity" name="activity" placeholder="Atividade"></div>
+                    <label class="form__day" for="day">
+                        <select class="form__day--select" name="day" id="day">
+                            <option value="segunda">Segunda-Feira</option>
+                            <option value="terça">Terça-Feira</option>
+                            <option value="quarta">Quarta-Feira</option>
+                            <option value="quinta">Quinta-Feira</option>
+                            <option value="sexta">Sexta-Feira</option>
+                            <option value="sabado">Sábado</option>
+                            <option value="domingo">Domingo</option>
+                        </select>
+                    </label>
+                    <label class="form__time" for="time">
+                        <select class="form__time--select" name="time" id="time">
+                            <option value="00h00m">00h00m</option>
+                            <option value="00h30m">00h30m</option>
+                            <option value="01h00m">01h00m</option>
+                            <option value="01h30m">01h30m</option>
+                            <option value="02h00m">02h00m</option>
+                            <option value="02h30m">02h30m</option>
+                            <option value="03h30m">03h30m</option>
+                            <option value="04h00m">04h00m</option>
+                            <option value="04h30m">04h30m</option>
+                            <option value="05h00m">05h00m</option>
+                            <option value="05h30m">05h30m</option>
+                            <option value="06h00m">06h00m</option>
+                            <option value="06h30m">06h30m</option>
+                            <option value="07h00m">07h00m</option>
+                            <option value="07h30m">07h30m</option>
+                            <option value="08h00m">08h00m</option>
+                            <option value="08h30m">08h30m</option>
+                            <option value="09h00m">09h00m</option>
+                            <option value="09h30m">09h30m</option>
+                            <option value="10h00m">10h00m</option>
+                            <option value="10h30m">10h30m</option>
+                            <option value="11h00m">11h00m</option>
+                            <option value="11h30m">11h30m</option>
+                            <option value="12h00m">12h00m</option>
+                            <option value="12h30m">12h30m</option>
+                            <option value="13h00m">13h00m</option>
+                            <option value="13h30m">13h30m</option>
+                            <option value="14h00m">14h00m</option>
+                            <option value="14h30m">14h30m</option>
+                            <option value="15h00m">15h00m</option>
+                            <option value="15h30m">15h30m</option>
+                            <option value="16h00m">16h00m</option>
+                            <option value="16h30m">16h30m</option>
+                            <option value="17h00m">17h00m</option>
+                            <option value="17h30m">17h30m</option>
+                            <option value="18h00m">18h00m</option>
+                            <option value="18h30m">18h30m</option>
+                            <option value="19h00m">19h00m</option>
+                            <option value="19h30m">19h30m</option>
+                            <option value="20h00m">20h00m</option>
+                            <option value="20h30m">20h30m</option>
+                            <option value="21h00m">21h00m</option>
+                            <option value="21h30m">21h30m</option>
+                            <option value="22h00m">22h00m</option>
+                            <option value="22h30m">22h30m</option>
+                            <option value="23h00m">23h00m</option>
+                            <option value="23h30m">23h30m</option>
+                        </select>
+                    </label>
+                    <button type="submit" class="form__button--add" id="formSubmit"><b>+</b> Adicionar Atividade</button>
+                    <button type="button" onclick="removeAll()" class="form__button--rem"><b>-</b> Excluir Todos</button>
+                </form>
             </section>
-            
             <section class="main__section">
                 <ul class="main__section--buttons">
                     <li>
-                        <button class="main__section--segunda">
+                        <button class="main__section--segunda" onclick="clickSegunda()">
                             Segunda-Feira
                         </button>
                     </li>
                     <li>
-                        <button class="main__section--terca">
+                        <button class="main__section--terca" onclick="clickTerca()">
                             Terça-Feira
                         </button>
                     </li>
                     <li>
-                        <button class="main__section--quarta">
+                        <button class="main__section--quarta" onclick="clickQuarta()">
                             Quarta-Feira
                         </button>
                     </li>
                     <li>
-                        <button class="main__section--quinta">
+                        <button class="main__section--quinta" onclick="clickQuinta()">
                             Quinta-Feira
                         </button>
                     </li>
                     <li>
-                        <button class="main__section--sexta">
+                        <button class="main__section--sexta" onclick="clickSexta()">
                             Sexta-Feira
                         </button>
                     </li>
                     <li>
-                        <button class="main__section--sabado">
+                        <button class="main__section--sabado" onclick="clickSabado()">
                             Sábado
                         </button>
                     </li>
                     <li>
-                        <button class="main__section--domingo">
+                        <button class="main__section--domingo" onclick="clickDomingo()">
                             Domingo
                         </button>
                     </li>
@@ -139,109 +138,26 @@
                     <div class="main__section--mark">
                         <p>Horário</p>
                     </div>
-                    <ul class="list a" id="segunda">
-                        <li class="card">
-                            <div class="card__time card__time--segunda">
-                                <p>00h00m</p>
-                            </div>
-                            <div class="card__info">
-                                <div class="card__info--segunda"></div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                <button>Apagar</button>
-                            </div>
-                        </li>
-                        <li class="card">
-                            <div class="card__time card__time--segunda">
-                                <p>00h30m</p>
-                            </div>
-                            <div class="card__info">
-                                <div class="card__info--segunda"></div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                <button>Apagar</button>
-                            </div>
-                        </li>
-                        <li class="card">
-                            <div class="card__time card__time--segunda">
-                                <p>01h00m</p>
-                            </div>
-                            <div class="card__info">
-                                <div class="card__info--segunda"></div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                <button>Apagar</button>
-                            </div>
-                        </li>
+                    <ul class="list a off" id="segunda">
+                    
                     </ul>
                     <ul class="list b off" id="terca">
-                        <li class="card">
-                            <div class="card__time card__time--terca">
-                                <p>00h00m</p>
-                            </div>
-                            <div class="card__info">
-                                <div class="card__info--terca"></div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                <button>Apagar</button>
-                            </div>
-                        </li>
+                        
                     </ul>
                     <ul class="list c off" id="quarta">
-                        <li class="card">
-                            <div class="card__time card__time--quarta">
-                                <p>00h00m</p>
-                            </div>
-                            <div class="card__info">
-                                <div class="card__info--quarta"></div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                <button>Apagar</button>
-                            </div>
-                        </li>
+                        
                     </ul>
                     <ul class="list d off" id="quinta">
-                        <li class="card">
-                            <div class="card__time card__time--quinta">
-                                <p>00h00m</p>
-                            </div>
-                            <div class="card__info">
-                                <div class="card__info--quinta"></div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                <button>Apagar</button>
-                            </div>
-                        </li>
+                        
                     </ul>
                     <ul class="list e off" id="sexta">
-                        <li class="card">
-                            <div class="card__time card__time--sexta">
-                                <p>00h00m</p>
-                            </div>
-                            <div class="card__info">
-                                <div class="card__info--sexta"></div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                <button>Apagar</button>
-                            </div>
-                        </li>
+                        
                     </ul>
                     <ul class="list f off" id="sabado">
-                        <li class="card">
-                            <div class="card__time card__time--sabado">
-                                <p>00h00m</p>
-                            </div>
-                            <div class="card__info">
-                                <div class="card__info--sabado"></div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                <button>Apagar</button>
-                            </div>
-                        </li>
+                        
                     </ul>
                     <ul class="list g off" id="domingo">
-                        <li class="card">
-                            <div class="card__time card__time--domingo">
-                                <p>00h00m</p>
-                            </div>
-                            <div class="card__info">
-                                <div class="card__info--domingo"></div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                <button>Apagar</button>
-                            </div>
-                        </li>
+                    
                     </ul>
                 <article/>
             </section>
